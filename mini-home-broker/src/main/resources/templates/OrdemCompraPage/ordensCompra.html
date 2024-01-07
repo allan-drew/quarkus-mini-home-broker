@@ -1,0 +1,31 @@
+
+{#include base.html}
+{#title} ORDENS DE COMPRA DO MINI-HOME-BROKER {/title}
+
+{#body}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID DA ORDEM</th>
+        <th scope="col">NOME DO INVESTIDOR</th>
+        <th scope="col">E-MAIL DO INVESTIDOR</th>
+        <th scope="col">INVESTIMENTO</th>
+        <th scope="col">DATA DA ORDEM DA COMPRA</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {#for ordemCompra in ordensCompra}
+    <tr>
+        <th scope="row"><a href="http://localhost:8080/page/ordemcompra/{ordemCompra.id}">{ordemCompra.id}</a></th>
+        <th>{ordemCompra.investidor.nome} {ordemCompra.investidor.sobrenome}</th>
+        <th>{ordemCompra.investidor.email}</th>
+        <th>{ordemCompra.investimento.descricao}</th>
+        <th>{ordemCompra.date}</th>
+    </tr>
+    {/for}
+    </tbody>
+
+</table>
+{/body}
+{/include}

@@ -1,0 +1,44 @@
+{#include base.html}
+{#title} ORDEM DE COMPRA {/title}
+
+
+{#body}
+
+<div class="row mb-3">
+  <label class="col-sm-2 col-form-label">Id</label>
+  <div class="col-sm-10">
+    <input type="text" readonly class="form-control" value="{ordemCompra.id}">
+  </div>
+</div>
+
+<div class="row mb-3">
+  <label class="col-sm-2 col-form-label"> NOME DO INVESTIDOR </label>
+  <div class="col-sm-10">
+    <input type="text" readonly class="form-control" value="{ordemCompra.investidor.nome} {ordemCompra.investidor.sobrenome}">
+  </div>
+</div>
+
+<div class="row mb-3">
+  <label class="col-sm-2 col-form-label"> E-MAIL DO INVESTIDOR </label>
+  <div class="col-sm-10">
+    <input type="text" readonly class="form-control" value="{ordemCompra.investidor.email}">
+  </div>
+</div>
+
+<div class="row mb-3">
+  <label class="col-sm-2 col-form-label"> INVESTIMENTO </label>
+  <div class="col-sm-10">
+    <input type="text" readonly class="form-control" value="{ordemCompra.investimento.descricao}">
+  </div>
+</div>
+
+<div class="row mb-3">
+  <label class="col-sm-2 col-form-label">DATA DA ORDEM DA COMPRA</label>
+  <div class="col-sm-10">
+    <input type="text" readonly class="form-control" value="{ordemCompra.date}">
+  </div>
+</div>
+
+
+{/body}
+{/include}

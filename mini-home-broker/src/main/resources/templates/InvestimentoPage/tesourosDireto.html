@@ -1,0 +1,37 @@
+{#include base.html}
+{#title} TESOURO DIRETO DISPONÍVEL NO MINI-HOME-BROKER {/title}
+
+{#body}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"> ID </th>
+            <th scope="col"> DESCRICAO  </th>
+            <th scope="col"> PRECO UNITARIO </th>
+            <th scope="col"> INVESTIMENTO MÍNIMO </th>
+            <th scope="col"> RENTABILIDADE ANUAL (%) </th>
+            <th scope="col"> TIPO DO TESOURO </th>
+            <th scope="col"> VENCIMENTO </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        {#for tesouroDireto in tesourosDireto}
+        <tr>
+            <th scope="row">{tesouroDireto.id}</th>
+            <th>{tesouroDireto.descricao}</th>
+            <th>{tesouroDireto.precoUnitario}</th>
+            <th>{tesouroDireto.investimentoMinimo}</th>
+            <th>{tesouroDireto.rentabilidadeAnual}</th>
+            <th>{tesouroDireto.tipoTesouro}</th>
+            <th>{tesouroDireto.vencimento}</th>
+        </tr>
+        {/for}
+        </tbody>
+
+    </table>
+
+{/body}
+
+{/include}

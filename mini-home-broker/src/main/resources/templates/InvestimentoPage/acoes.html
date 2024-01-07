@@ -1,0 +1,38 @@
+
+{#include base.html}
+{#title} ACOES DISPONÍVEIS NO MINI-HOME-BROKER {/title}
+
+{#body}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"> ID </th>
+                <th scope="col"> DESCRICAO  </th>
+                <th scope="col"> PRECO UNITARIO </th>
+                <th scope="col"> EMPRESA </th>
+                <th scope="col"> INSTITUICAO ESCRITURADORA DA ACAO </th>
+                <th scope="col"> TICKER </th>
+                <th scope="col"> TIPO DA ACAO </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {#for acao in acoes}
+                <tr>
+                    <th scope="row">{acao.id}</th>
+                    <th >{acao.descricao}</th>
+                    <th >{acao.precoUnitario}</th>
+                    <th >{acao.empresa}</th>
+                    <th >{acao.escriturador.nome}</th>
+                    <th >{acao.ticker}</th>
+                    <th >{acao.tipoAcao}</th>
+                </tr>
+            {/for}
+        </tbody>
+
+    </table>
+
+{/body}
+
+{/include}

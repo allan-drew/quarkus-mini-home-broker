@@ -1,0 +1,11 @@
+version: "3"
+services:
+    minihomebroker_database_production:
+        image: "postgres:13.3"
+        container_name: "minihomebroker_database_production"
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_DB=minihomebroker_database_production
+            - POSTGRES_USER=homebrokeruser
+            - POSTGRES_PASSWORD=homebrokerpassword
